@@ -62,7 +62,7 @@ y = np.dstack([y_dish, y_kettle, y_micro, y_tumble, y_wash])
 #Split into train and test
 X_train, X_test, y_train, y_test = train_test_split(X_train, y, test_size=0.2)#y
 
-#Slice the rows into smalle row of length 120
+#Slice the rows into small row of length 120
 X_train_sliding = np.reshape(X_train, (8336*2160//120, 120, 1))
 y_train_sliding = np.reshape(y_train, (8336*2160//120, 120, 5))
 X_test_sliding = np.reshape(X_test, (2085*2160//120, 120, 1))
